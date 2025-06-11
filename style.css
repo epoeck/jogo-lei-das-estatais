@@ -1,0 +1,201 @@
+/* Importando fontes definidas no HTML */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte do corpo */
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Fonte dos títulos */
+    color: #003366;
+}
+
+#game-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+}
+
+#logo {
+    max-height: 200px;
+    margin-bottom: 0.5rem;
+}
+
+#start-image, #result-image {
+    max-width: 50%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+}
+
+#story-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+#progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+}
+
+#progress-bar {
+    height: 15px;
+    width: 0%;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+#question-counter {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+#question-text {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.option-button {
+    background-color: #f8f9fa;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #e9ecef;
+    border-color: #0056b3;
+}
+
+.option-button:disabled {
+    cursor: default;
+}
+
+.option-button.correct {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    font-weight: 600;
+}
+
+.option-button.incorrect {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+    font-weight: 600;
+}
+
+#start-button, #next-button, #restart-button, #review-button, #back-to-results-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#start-button:hover, #next-button:hover, #restart-button:hover, #review-button:hover, #back-to-results-button:hover {
+    background-color: #003366;
+}
+
+#review-button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+#review-button:hover {
+    background-color: #e0a800;
+}
+
+#feedback-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+#feedback-container.correct {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+}
+
+#feedback-container.incorrect {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}
+
+#final-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilos para a tela de Revisão de Erros */
+#review-container {
+    text-align: left;
+}
+
+.review-item {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-left: 5px solid #dc3545; /* Vermelho para indicar erro */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.review-item h4 {
+    margin-top: 0;
+}
+
+.review-item p {
+    margin: 0.5rem 0;
+}
+
+.user-answer-wrong {
+    color: #721c24;
+    font-weight: bold;
+}
+
+.correct-answer-review {
+    color: #155724;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}

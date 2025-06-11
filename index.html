@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Fênix: Salvando a Estatal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <img src="images/logo.png" alt="Logo da Empresa" id="logo">
+
+        <header id="start-screen">
+            <h1>Projeto Fênix: Salvando a Estatal</h1>
+            <img src="images/start.png" alt="Ilustração de um escritório" id="start-image">
+            <p id="story-text">A estatal "InovaBrasil S.A." está em crise. Você foi chamado para liderar o Projeto Fênix. Suas decisões são cruciais. Clique abaixo para começar!</p>
+            <button id="start-button">Iniciar Missão</button>
+        </header>
+        
+        <div id="quiz-container" class="hidden">
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="question-counter"></p>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+            <button id="next-button" class="hidden">Próxima Pergunta</button>
+        </div>
+
+        <div id="feedback-container" class="hidden">
+            <h3 id="feedback-title"></h3>
+            <p id="feedback-text"></p>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <img src="" alt="Resultado da Missão" id="result-image">
+            <h2 id="result-title"></h2>
+            <p id="final-score"></p>
+            <p id="final-message"></p>
+            <button id="restart-button">Jogar Novamente</button>
+            <button id="review-button" class="hidden">Rever Erros</button>
+        </div>
+
+        <div id="review-container" class="hidden">
+            <h2>Revisão dos Erros</h2>
+            <div id="review-content"></div>
+            <button id="back-to-results-button">Voltar ao Resultado</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
