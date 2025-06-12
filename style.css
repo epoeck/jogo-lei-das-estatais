@@ -58,6 +58,10 @@ h1, h2, h3 {
     background-color: #4CAF50;
     border-radius: 25px;
     transition: width 0.5s ease-in-out;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 15px;
 }
 
 #question-counter {
@@ -198,4 +202,24 @@ h1, h2, h3 {
 
 .hidden {
     display: none;
+}
+
+#error-container {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+#record-display {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+#best-score {
+    font-weight: bold;
+    margin-top: 1rem;
 }
