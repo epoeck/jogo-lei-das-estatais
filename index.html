@@ -17,7 +17,8 @@
             <h1>Projeto Fênix: Salvando a Estatal</h1>
             <img src="images/start.png" alt="Ilustração de um escritório" id="start-image">
             <p id="story-text">A estatal "InovaBrasil S.A." está em crise. Você foi chamado para liderar o Projeto Fênix. Suas decisões são cruciais. Clique abaixo para começar!</p>
-            <button id="start-button">Iniciar Missão</button>
+            <button id="start-button" aria-label="Iniciar Missão">Iniciar Missão</button>
+            <p id="record-display" class="hidden"></p>
         </header>
         
         <div id="quiz-container" class="hidden">
@@ -27,7 +28,7 @@
             <p id="question-counter"></p>
             <h2 id="question-text"></h2>
             <div id="options-container"></div>
-            <button id="next-button" class="hidden">Próxima Pergunta</button>
+            <button id="next-button" class="hidden" aria-label="Próxima Pergunta">Próxima Pergunta</button>
         </div>
 
         <div id="feedback-container" class="hidden">
@@ -40,17 +41,20 @@
             <h2 id="result-title"></h2>
             <p id="final-score"></p>
             <p id="final-message"></p>
-            <button id="restart-button">Jogar Novamente</button>
-            <button id="review-button" class="hidden">Rever Erros</button>
+            <p id="best-score"></p>
+            <button id="restart-button" aria-label="Jogar Novamente">Jogar Novamente</button>
+            <button id="review-button" class="hidden" aria-label="Rever Erros">Rever Erros</button>
         </div>
 
         <div id="review-container" class="hidden">
             <h2>Revisão dos Erros</h2>
             <div id="review-content"></div>
-            <button id="back-to-results-button">Voltar ao Resultado</button>
+            <button id="back-to-results-button" aria-label="Voltar ao Resultado">Voltar ao Resultado</button>
         </div>
     </div>
-
+    <script src="constants.js"></script>
+    <script src="utils.js"></script>
+    <script src="game.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
