@@ -36,10 +36,15 @@
             try{
                 const res = await fetch('questoes.json');
                 if(!res.ok) throw new Error('Falha ao carregar questões.');
-                allQuestions = await res.json();
+                allQuestions = (await res.json()).filter(q => q && q.question && Array.isArray(q.options) && typeof q.answer === 'number');
+                if(allQuestions.length === 0) throw new Error('Nenhuma pergunta válida encontrada.');
             }catch(e){
                 console.error(e);
-                document.body.innerHTML = 'Erro ao carregar o jogo. Verifique o arquivo `questoes.json`.';
+                const errBox = document.getElementById('error-container');
+                if(errBox){
+                    errBox.textContent = 'Erro ao carregar o jogo. Verifique o arquivo `questoes.json`.';
+                    errBox.classList.remove('hidden');
+                }
                 return;
             }
         }
@@ -50,6 +55,8 @@
         q.hide(el.quizContainer);
         q.hide(el.resultContainer);
         q.hide(el.reviewContainer);
+        const errBox = document.getElementById('error-container');
+        if(errBox) q.hide(errBox);
         q.show(el.startScreen);
 
         const best = localStorage.getItem(q.HIGH_SCORE_KEY);
@@ -198,8 +205,14 @@
     }
 
     function handleKeyDown(e){
-        if(el.quizContainer.classList.contains('hidden')) return;
         const key = e.key;
+        if(!el.startScreen.classList.contains('hidden')){
+            if(key === 'Enter' || key === ' '){
+                el.startButton.click();
+            }
+            return;
+        }
+        if(el.quizContainer.classList.contains('hidden')) return;
         if(key >= '1' && key <= '4'){
             const idx = parseInt(key,10) - 1;
             const btn = el.optionsContainer.children[idx];

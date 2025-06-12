@@ -204,6 +204,15 @@ h1, h2, h3 {
     display: none;
 }
 
+#error-container {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
 #record-display {
     font-size: 0.9rem;
     color: #555;
